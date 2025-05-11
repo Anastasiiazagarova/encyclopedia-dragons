@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Енциклопедія драконів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen">
+    <h1>Енциклопедія драконів</h1>
+    <button id="start-button">Почати</button>
+  </div>
+  <div id="clouds"></div>
+  <div id="filters">
+    <button class="filter-btn" onclick="filterDragons('all')">Всі</button>
+    <button class="filter-btn" onclick="filterDragons('вогню')">🔥 Вогонь</button>
+    <button class="filter-btn" onclick="filterDragons('льоду')">❄️ Лід</button>
+    <button class="filter-btn" onclick="filterDragons('бурі')">🌪️ Буря</button>
+  </div>
+  <div id="map-wrapper">
+    <div id="map-container">
+      <div class="dragon-marker" style="top: 20%; left: 30%; background-image: url('https://usagif.com/wp-content/uploads/gifs/dragon-109.gif.webp');" data-name="Дракон Вогню" data-description="Могутній дракон, що дихає вогнем і панує над палаючими землями."></div>
+      <div class="dragon-marker" style="top: 50%; left: 60%; background-image: url('https://usagif.com/wp-content/uploads/gifs/dragon-86.gif.webp');" data-name="Дракон Льоду" data-description="Летючий дракон, що несе з собою холод і вічний сніг."></div>
+      <div class="dragon-marker" style="top: 70%; left: 40%; background-image: url('https://usagif.com/wp-content/uploads/gifs/dragon-48.gif.webp');" data-name="Дракон Бурі" data-description="Тотемне створіння, здатне викликати бурі та грози."></div>
+      <img class="flying-dragon" src="https://usagif.com/wp-content/uploads/gifs/dragon-12.gif" alt="Літаючий дракон">
+    </div>
+  </div>
+  <div id="dragon-info">
+    <div class="content">
+      <button class="close-btn">&times;</button>
+      <h2 id="dragon-name"></h2>
+      <p id="dragon-description"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
