@@ -1,0 +1,159 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+}
+
+#start-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://usagif.com/wp-content/uploads/gifs/dragon-2.gif.webp') no-repeat center center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+#start-screen h1 {
+  font-size: 2.5em;
+  margin: 0.5em 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+#start-button {
+  padding: 0.8em 2em;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+#clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://i.ibb.co/fCCN0CV/clouds.png') repeat;
+  background-size: cover;
+  z-index: 19;
+  animation: cloudFade 2s ease forwards;
+  display: none;
+}
+
+@keyframes cloudFade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
+#filters {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1em;
+  border-radius: 10px;
+  color: white;
+  z-index: 15;
+}
+
+.filter-btn {
+  margin: 5px;
+  padding: 0.3em 1em;
+  border: none;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#map-wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#map-container {
+  width: 2000px;
+  height: 1500px;
+  background: url('https://img.freepik.com/premium-photo/fantasy-concept-adventure-map_863013-40441.jpg') no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+.dragon-marker {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+#dragon-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+}
+
+#dragon-info .content {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+#dragon-info .close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.flying-dragon {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+  animation: flyDragon 20s linear infinite alternate;
+}
+
+@keyframes flyDragon {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(60vw, 10vh); }
+  50% { transform: translate(40vw, 60vh); }
+  75% { transform: translate(80vw, 30vh); }
+  100% { transform: translate(0, 0); }
+}
